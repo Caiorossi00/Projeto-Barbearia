@@ -31,7 +31,7 @@
 
 .top-info hr {
   margin-top: 1.8em;
-  width: 140%;
+  width: 100vw;
   margin-left: -5vw;
   overflow: hidden;
 }
