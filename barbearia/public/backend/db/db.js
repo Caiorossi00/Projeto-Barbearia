@@ -11,7 +11,6 @@ const newConnectDataBase = async() => {
     return dataBaseConnect
 }
 
-
 const newDadosDataBase = async (Pedido, Pagamento, Dia) => {
   try {
     const dataBase = await newConnectDataBase();
@@ -19,7 +18,7 @@ const newDadosDataBase = async (Pedido, Pagamento, Dia) => {
     const databaseCollection = databaseDb.collection(collectionDb);
     // await databaseCollection.insertMany({})
   } catch (error) {
-
+    
   }
 };
 
