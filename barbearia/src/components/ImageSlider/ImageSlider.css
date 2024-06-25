@@ -1,0 +1,16 @@
+.image-slider {
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slick-dots li button:before {
+  color: black;
+}

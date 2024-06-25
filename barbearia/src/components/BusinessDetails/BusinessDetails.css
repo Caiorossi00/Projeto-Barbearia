@@ -1,0 +1,81 @@
+.general-container {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  position: absolute;
+  min-width: 100vw;
+  margin-top: -2vh;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.top-info {
+  margin-top: 5vh;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.top-info h1 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.top-info p {
+  font-size: 1.3em;
+  color: grey;
+  margin-left: 1%;
+}
+
+.top-info hr {
+  margin-top: 1.8em;
+  width: 140%;
+  margin-left: -5vw;
+  overflow: hidden;
+}
+
+.mid-info {
+  font-weight: 100;
+  font-size: 1.8em;
+  margin-right: 30%;
+  margin-left: 5vw;
+  margin-bottom: 0;
+}
+
+.mid-info hr {
+  width: 110vw;
+  margin-left: -2em;
+  overflow: hidden;
+  margin-top: 8vh;
+}
+
+.emails-input {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 18vh;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-form input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.email-form button[type="submit"] {
+  background-color: #ff8f99;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
