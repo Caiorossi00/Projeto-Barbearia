@@ -9,5 +9,5 @@ consign()
 
 const port = 8080 | process.env.PORT;
 api.listen(8080, () => {
-  console.log(`serving ${port}`);
+  console.log(`server running on port ${port}`);
 });

@@ -1,6 +1,7 @@
 
 module.exports = (api) => {
   const bodyMiddle = require("body-parser")
+
   api.use(bodyMiddle.json())
   api.post("/ficha", async(res, data) => {
     try { 
