@@ -2,7 +2,6 @@ const express = require("express");
 const api = express();
 
 const consign = require("consign")
-
 consign()
 .include("./routers")
 .into(api);
