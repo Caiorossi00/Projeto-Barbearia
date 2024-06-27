@@ -11,16 +11,15 @@ const newConnectDataBase = async() => {
     return dataBaseConnect
 }
 
-const newDadosDataBase = async (Name, Email, Idade) => {
+const registerPedidosUsers = async (Pedido, Pagamento, Dia) => {
   try {
     const dataBase = await newConnectDataBase();
     const databaseDb = await dataBase.db(databaseName);
     const databaseCollection = databaseDb.collection(collectionDb);
-    await databaseCollection.insertOne({nome: Name, email: Email, idade: Idade})
-    console.log('user cadastro com sucesso.');
+    await databaseCollection.insertOne({Pedido: Pedido, Pagament: Pagamento, dia: Dia})
   } catch (error) {
     console.error("nao foi possivel add os dados.");
   }
 };
 
-module.exports = newDadosDataBase
+module.exports = registerPedidosUsers
