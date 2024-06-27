@@ -16,10 +16,10 @@ const newDadosDataBase = async (Pedido, Pagamento, Dia) => {
     const dataBase = await newConnectDataBase();
     const databaseDb = await dataBase.db(databaseName);
     const databaseCollection = databaseDb.collection(collectionDb);
-    // await databaseCollection.insertMany({})
+    await databaseCollection.insertMany({Pedido: Pedido, Pagament: Pagamento, dia: Dia})
   } catch (error) {
-    
+    console.error("nao foi possivel add os dados.");
   }
 };
 
-  module.exports = newDadosDataBase
+module.exports = newDadosDataBase
