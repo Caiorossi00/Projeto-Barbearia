@@ -1,0 +1,139 @@
+.appointments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 5vh;
+}
+
+.ap-top-info {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.ap-top-info h1 {
+  font-size: 2.5em;
+}
+
+.ap-top-info hr {
+  width: 85vw;
+  margin-top: 0;
+}
+
+.ap-top-info button {
+  font-family: inherit;
+  background-color: #fea1a9;
+  border: none;
+  padding: 10px;
+  width: 50%;
+  font-size: 22px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ap-top-info button:hover,
+.ap-lower-info button:hover {
+  color: black;
+  transition: ease-in-out 0.3s;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.ap-mid-info {
+  width: 90vw;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.ap-mid-info h2 {
+  font-size: 2em;
+}
+
+.located-display {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  background-color: #fea1a9;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.located-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: white;
+  font-style: italic;
+}
+
+.located-text h4 {
+  font-size: 1.8em;
+}
+
+.located-text p {
+  font-size: 1.3em;
+}
+
+.img-appointment img {
+  width: 40vw;
+  border-radius: 10%;
+}
+
+.ap-lower-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+  gap: 1em;
+  margin-bottom: 15vh;
+}
+
+.ap-lower-info h1 {
+  font-size: 2em;
+}
+
+.hairstyles-display {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  gap: 1em;
+  justify-content: space-between;
+  background-color: rgb(211, 211, 211);
+  padding: 1em;
+  border-radius: 2%;
+}
+
+.hairstyle:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
+}
+
+.hairstyle img {
+  max-width: 8em;
+  max-height: 8em;
+  min-width: 8em;
+  min-height: 8em;
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.hairstyle p {
+  font-size: 1.3em;
+}
+
+.ap-lower-info button {
+  font-family: inherit;
+  background-color: #fea1a9;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 22px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2vh;
+}
