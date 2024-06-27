@@ -1,4 +1,4 @@
-const newDadosDataBase = require("../db/db");
+const newDadosDataBase = require("../db/dbCadastroProdutos");
 
 
 module.exports = (api) => {

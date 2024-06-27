@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb')
 
 const url = "mongodb+srv://admin:admin1234@dados.7d94myt.mongodb.net/"
 const databaseName = 'dadosClientes'
-const collectionDb = 'dadosClientes'
+const collectionDb = 'pedidos'
 const client = new MongoClient(url)
 
 const newConnectDataBase = async() => {
@@ -16,10 +16,12 @@ const newDadosDataBase = async (Pedido, Pagamento, Dia) => {
     const dataBase = await newConnectDataBase();
     const databaseDb = await dataBase.db(databaseName);
     const databaseCollection = databaseDb.collection(collectionDb);
-    await databaseCollection.insertMany({Pedido: Pedido, Pagament: Pagamento, dia: Dia})
+    await databaseCollection.insertOne({Pedido: Pedido, Pagament: Pagamento, dia: Dia})
   } catch (error) {
     console.error("nao foi possivel add os dados.");
   }
 };
+
+
 
 module.exports = newDadosDataBase
