@@ -1,11 +1,11 @@
 async function a() {
   try {
-    const daya = await fetch("http://localhost:8080/registro", {
+    const daya = await fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome: "carlos", email: "carlos@gmail.com",idade : 43 }),
+      body: JSON.stringify({ email: "carlos@gmail.com", senha: 333 }),
     });
     const testes = await daya.json();
     console.log(testes);
@@ -13,5 +13,6 @@ async function a() {
     console.log(error);
   }
 }
+
 
 a();

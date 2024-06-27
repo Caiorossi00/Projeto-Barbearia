@@ -1,4 +1,4 @@
-const registerPedidosUsers = require("../db/dbRegistroUsers");
+const registerPedidosUsers = require("../db/dbUsers");
 
 
 
