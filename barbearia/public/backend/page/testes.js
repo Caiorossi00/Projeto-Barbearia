@@ -5,7 +5,7 @@ async function a() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome: "silva", email: "ggyvfv@gmail.com", idade: 18, senha: "147444444444" }),
+      body: JSON.stringify({ nome: "silva", email: "ggyvfv@gmail.com", idade: 1448, senha: "147444444444" }),
     });
     const testes = await daya.json();
     console.log(testes);
