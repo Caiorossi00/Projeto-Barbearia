@@ -1,10 +1,11 @@
 const databaseRegisterUsers = require("../db/dbCadastroProdutos");
-
+const jwt = require("jsonwebtoken")
 module.exports = (api) => {
     const bodyMiddle = require("body-parser");
     api.use(bodyMiddle.json());
     api.post("/registro", async (res, data) => {
       try {
+        
         const { nome,email, idade, senha } = res.body;
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!regexEmail.test(email)) {
@@ -12,13 +13,14 @@ module.exports = (api) => {
             return
         }
         if (senha.length < 8) {
-          data.send({message: "Sua senha deve ter mais de seis caracteres", status: 400}).status(400)
+          data.send({message: "Sua senha deve ter mais de oito caracteres", status: 400}).status(400)
           return
         }
         if(!nome && !email && !idade & !senha) {
          data.send({message: "Os campo é obrigatório e não pode ficar vazio.", status: 400,  }).status(400); 
          return
         }
+
         await databaseRegisterUsers(nome,email, idade, senha)
         data.send({  message: "Os dados foram recebidos com sucesso.",  status: 200, }) .status(200);
       } catch (error) {
