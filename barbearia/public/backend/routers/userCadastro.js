@@ -5,7 +5,6 @@ module.exports = (api) => {
     api.use(bodyMiddle.json());
     api.post("/registro", async (res, data) => {
       try {
-        
         const { nome,email, idade, senha } = res.body;
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!regexEmail.test(email)) {
