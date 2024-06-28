@@ -23,16 +23,16 @@ const registerPedidosUsers = async (Pedido, Pagamento, Dia) => {
 };
 
 
-const dbLoginUser = async(e, p) => {
+const dbLoginUser = async(emai, pass) => {
   try {
     const database = await newConnectDataBase()
     const searchLoginDb = await database.find().toArray()
     searchLoginDb.forEach(data => {
     const {senha, email} = data
-    if (email == e && p == senha) {
+    if (!email == emai && !pass == senha) {
       console.log("dados incorretos");
     }
-    
+
     })
   } catch (error) {
     console.error("error inesperado.")
