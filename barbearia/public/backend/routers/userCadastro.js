@@ -12,13 +12,14 @@ module.exports = (api) => {
             return
         }
         if (senha.length < 8) {
-          data.send({message: "Sua senha deve ter mais de seis caracteres", status: 400}).status(400)
+          data.send({message: "Sua senha deve ter mais de oito caracteres", status: 400}).status(400)
           return
         }
         if(!nome && !email && !idade & !senha) {
          data.send({message: "Os campo é obrigatório e não pode ficar vazio.", status: 400,  }).status(400); 
          return
         }
+
         await databaseRegisterUsers(nome,email, idade, senha)
         data.send({  message: "Os dados foram recebidos com sucesso.",  status: 200, }) .status(200);
       } catch (error) {
