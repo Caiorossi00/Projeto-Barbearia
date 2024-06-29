@@ -54,6 +54,11 @@ function Header() {
               Contact
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/login" onClick={toggleMenu} activeClassName="active">
+              Login
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
